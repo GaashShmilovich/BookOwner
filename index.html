@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Book Shop</title>
+  </head>
+  <body onload="onInit()">
+    <h1>Book Shop</h1>
+    <div class="addbook-container">
+      <button class="add-book" onclick="onAddBook()">Create new book</button>
+    </div>
+    <!-- <select onchange="onSetFilter(this.value)">
+      <option value="highest">Highest price</option>
+      <option value="lowestRate">Lowest rating</option>
+    </select> -->
+
+    <table>
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>name</th>
+          <th>price</th>
+          <th class="actions">actions</th>
+          <th id="empty"></th>
+          <th id="empty1"></th>
+        </tr>
+      </thead>
+      <tbody class="books-table"></tbody>
+    </table>
+    <div class="pagination">
+      <button class="prev-page" title="prev page" onclick="onPreviousPage()">
+        Previous page
+      </button>
+      <button class="next-page" title="next page" onclick="onNextPage()">
+        Next page
+      </button>
+    </div>
+    <div class="modal"></div>
+
+    <script src="js/services/util.service.js"></script>
+    <script src="js/services/books.service.js"></script>
+    <script src="js/books.controller.js"></script>
+  </body>
+</html>
